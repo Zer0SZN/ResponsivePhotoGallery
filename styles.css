@@ -1,0 +1,46 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: outfit;
+}
+@media (min-width: 600px) and (max-width: 990px) {
+    #galleryContainer{
+        grid-template-columns: repeat(auto-fit, 45%);
+    }
+}
+@media (min-width: 1440px){
+    #galleryContainer {
+        grid-template-columns: repeat(auto-fit, 30%);
+    }
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+#galleryContainer {
+    display: grid;
+    justify-content: space-around;
+    row-gap: 4em;
+    padding: 2em;
+}
+#imageContainer img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s;
+}
+#imageContainer:hover img {
+    transform: scale(1.5);
+}
+h1, p {
+    text-align: center;
+}
+#galleryItem {
+    box-shadow: rgba(0,0,0,0.34) 0px 5px 15px;
+    border-radius: 10px;
+}
+#imageContainer {
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    overflow: hidden;
+
+}
